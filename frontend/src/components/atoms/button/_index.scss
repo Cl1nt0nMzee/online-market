@@ -1,0 +1,15 @@
+@import '../../../styles/abstracts/colors';
+
+// $color-1: #000000;
+// $color-2: #ffffff;
+// $color-3: #ff0000;
+
+button {
+    outline:none;
+    border:none;
+    appearance: none;
+}
+
+.primary {
+    background-color: $color-1;
+}

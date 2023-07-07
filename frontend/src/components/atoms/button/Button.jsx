@@ -1,4 +1,6 @@
-const PrimaryButton = () => {
+import './_index.scss'
+
+export const PrimaryButton = () => {
     return (
         <button className="primary" type="button">
         Primary Button
@@ -6,7 +8,7 @@ const PrimaryButton = () => {
     );
 }
 
-const SecondaryButton = () => {
+export const SecondaryButton = () => {
     return (
         <button className="secondary" type="button">
         Secondary Button
@@ -14,10 +16,12 @@ const SecondaryButton = () => {
     );
 }
 
-const TertiaryButton = () => {
+export const TertiaryButton = () => {
     return (
         <button className="tertiary" type="button">
         Tertiary Button
         </button>
     );
 }
+
+// export { PrimaryButton, SecondaryButton, TertiaryButton }
