@@ -1,8 +1,5 @@
-@import '../../../styles/abstracts/colors';
-
-// $color-1: #000000;
-// $color-2: #ffffff;
-// $color-3: #ff0000;
+// @import '../../../styles/abstracts/colors';
+@import '../../../styles/abstracts/index' ;
 
 button {
     outline:none;
@@ -10,6 +7,48 @@ button {
     appearance: none;
 }
 
+
 .primary {
-    background-color: $color-1;
+    color: var(--neuWhite-100);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px 14px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: $priBlue-500;
+                    
+    cursor:pointer;
+    transition: all 100ms ease-out;
+}
+/* Hover State */ 
+.primary:hover {
+    background-color: $priBlue-700;
+    box-shadow: var(--boxShadow);
+}
+/* Active State */ 
+.primary:active {
+    background-color: $priBlue-700;
+    transform: translateY(4px);
+}
+/* Focus State */ 
+.primary:focus-visible {
+    background-color: $priBlue-700;
+    box-shadow: var(--boxShadow);
+    outline: solid 2px $focusBlue-75 ;
+    outline-offset: 3px;
+}
+/* 
+Disabled State  (incl. hover,active, while disabled)*/ 
+.primary:is(:disabled) {
+    background-color: $accShade-300;
+    cursor: not-allowed;
+}
+.primary:is(:disabled):hover {
+    background-color: $accShade-300;
+    box-shadow: none;
+}
+.primary:is(:disabled):active {
+    background-color: $accShade-300;
+    transform: translateY(0);
 }

@@ -1,0 +1,48 @@
+*, *::before, *::after{
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: none; /* for iOS Safari */
+    text-size-adjust: none;/* for other mobile browser */
+}
+
+body {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+    margin: 0;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;    
+}
+
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+
+menu, ol, ul {
+    padding-left: 0;
+}
+
+:focus:not(:focus-visible) {
+    outline:none
+}

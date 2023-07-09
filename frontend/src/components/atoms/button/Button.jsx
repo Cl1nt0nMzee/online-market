@@ -1,9 +1,9 @@
 import './_index.scss'
 
-export const PrimaryButton = () => {
+export const PrimaryButton = ({ text, size }) => {
     return (
         <button className="primary" type="button">
-        Primary Button
+        {text}
         </button>
     );
 }

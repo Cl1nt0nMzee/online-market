@@ -11,7 +11,7 @@ function App() {
   return (
     <main>
       <h1>Hello Vite + React!</h1>
-      <PrimaryButton />
+      <PrimaryButton text={'Primary Button'} />
       <SecondaryButton />
       <TertiaryButton />
     </main>
