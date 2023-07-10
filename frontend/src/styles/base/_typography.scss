@@ -1,4 +1,48 @@
-h1 {
+@import '../abstracts/index';
+
+$Givonic-Black: 'Givonic-Black', sans-serif;
+$Givonic-Bold: 'Givonic-Bold', sans-serif;
+$Givonic-SemiBold: 'Givonic-SemiBold', sans-serif;
+$Givonic-Regular: 'Givonic-Regular', sans-serif;
+$Givonic-Light: 'Givonic-Light', sans-serif;
+$Givonic-Thin: 'Givonic-Thin', sans-serif;
+
+$Inter-Bold: 'Inter-Bold', sans-serif;
+$Inter-SemiBold: 'Inter-SemiBold', sans-serif;
+$Inter-Medium: 'Inter-Medium', sans-serif;
+$Inter-Regular: 'Inter-Regular', sans-serif;
+
+.test {
+    font-family: $Givonic-Black;
     font-size: 3.2em;
-    line-height: 1.1;  
+    line-height: 1.1;
+    
+    background-color: red;
 }
+
+.typ__headline {
+    font-family: $Givonic-Bold;
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: $priBlue-600;
+
+    .Bold {
+        font-family: $Givonic-Black;
+        color: $priBlue-700;
+    }
+    
+}
+
+.typ__body {
+    font-family: $Inter-Medium;
+    font-size: 1.6em;
+    line-height: 1.5;
+    color: $priBlue-600;
+}
+
+.typ__captions {
+    font-family: $Inter-Regular;
+    color: $accShade-600;
+    font-size: 12px;
+}
+

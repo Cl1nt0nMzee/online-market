@@ -1,5 +1,5 @@
-// @import '../../../styles/abstracts/colors';
 @import '../../../styles/abstracts/index' ;
+@import '../../../styles/base/index' ;
 
 button {
     outline:none;
@@ -9,7 +9,7 @@ button {
 
 
 .primary {
-    color: var(--neuWhite-100);
+    color: $neuWhite-25;
     font-size: 16px;
     font-weight: 600;
     padding: 7px 14px;
@@ -24,7 +24,7 @@ button {
 /* Hover State */ 
 .primary:hover {
     background-color: $priBlue-700;
-    box-shadow: var(--boxShadow);
+    box-shadow: $box-shadow;
 }
 /* Active State */ 
 .primary:active {
@@ -34,7 +34,7 @@ button {
 /* Focus State */ 
 .primary:focus-visible {
     background-color: $priBlue-700;
-    box-shadow: var(--boxShadow);
+    box-shadow: $box-shadow;
     outline: solid 2px $focusBlue-75 ;
     outline-offset: 3px;
 }
@@ -51,4 +51,14 @@ Disabled State  (incl. hover,active, while disabled)*/
 .primary:is(:disabled):active {
     background-color: $accShade-300;
     transform: translateY(0);
+}
+.primary.small {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin: 8px;
+}
+.primary.large {
+    font-size: 18px;
+    padding: 9px 18px;
+    margin: 8px;
 }

@@ -2,18 +2,20 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import './styles/page_layouts/register.scss'
 
-import { PrimaryButton, SecondaryButton, TertiaryButton } from './components/atoms/button/Button.jsx';
+// import { PrimaryButton, SecondaryButton, TertiaryButton } from './components/atoms/button/Button.jsx';
+import { ImageSection } from './components/molecules/imageSection/ImageSection';
+import RegisterForm from './components/organisms/RegisterForm';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <main>
-      <h1>Hello Vite + React!</h1>
-      <PrimaryButton text={'Primary Button'} />
-      <SecondaryButton />
-      <TertiaryButton />
+    <main className='pageWrapper'>
+
+      <ImageSection />
+      <RegisterForm/>
     </main>
   )
 }

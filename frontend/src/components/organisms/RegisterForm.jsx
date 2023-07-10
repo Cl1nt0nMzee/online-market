@@ -25,7 +25,10 @@ const RegisterForm = () => {
 
     return (
         <form>
-
+            <h1 className="typ__headline Bold">Lorem Ipsum </h1>
+            <p className="typ__captions"> 
+            Similique et praesentium architecto aliquid nostrum quos nihil hic distinctio voluptatem necessitatibus eius sit fugiat consequuntur earum accusantium tempore labore repellendus expedita excepturi magnam fugit, commodi doloribus. Cumque, rerum consequatur!
+            Aliquid veniam ab fugit. Sapiente dolorum at corporis eaque, unde sunt vero quaerat ab consectetur eveniet quas. Maxime possimus tenetur, vitae cumque ducimus vel aspernatur beatae temporibus, rem doloribus magni.</p>
         </form>
     );
 };
