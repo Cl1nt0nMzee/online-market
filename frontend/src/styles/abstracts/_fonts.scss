@@ -41,6 +41,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Inter-Bold';
+    src:    url(/src/assets/fonts/Inter/Inter-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src:    url(/src/assets/fonts/Inter/Inter-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 
 @font-face {
     font-family: 'Inter-Medium';
