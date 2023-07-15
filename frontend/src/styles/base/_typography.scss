@@ -12,26 +12,38 @@ $Inter-SemiBold: 'Inter-SemiBold', sans-serif;
 $Inter-Medium: 'Inter-Medium', sans-serif;
 $Inter-Regular: 'Inter-Regular', sans-serif;
 
-.test {
-    font-family: $Givonic-Black;
-    font-size: 3.2rem;
-    line-height: 1.1;
-    
-    background-color: red;
-}
 
 .typ__headline {
     font-family: $Givonic-Bold;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     line-height: 1.1;
     color: $priBlue-600;
-
-    .Bold {
+}
+.typ__headline.bold {
         font-family: $Givonic-Black;
         color: $priBlue-700;
-    }
-    
 }
+.typ__headline.large {
+        font-family: $Givonic-SemiBold;
+        color: $priBlue-700;
+}
+.typ__headline.regular {
+        font-family: $Givonic-SemiBold;
+        font-size: 2rem;
+        color: $priBlue-700;
+}
+.typ__headline.subheadline {
+        font-family: $Givonic-SemiBold;
+        font-size: 1.75rem;
+        color: $priBlue-700;
+}
+.typ__headline.small {
+    font-family: $Givonic-SemiBold;
+    font-size: 1.5rem;
+    color: $priBlue-700;
+}
+    
+
 
 /*      
         Body Typography      
