@@ -1,5 +1,70 @@
+@import '../../../styles/abstracts/index' ;
+@import '../../../styles/base/index' ;
+
 input[type="text"],
 input[type="password"] {
     border: none;
     outline: none;
+}
+
+.standard {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 6px 6px;
+    transition: all 100ms ease;
+    * {
+        transition: all 100ms ease;
+    }
+
+    label {
+        display: block;
+        font-family: $Inter-SemiBold;
+        color: $priBlue-600;
+    }
+
+    input {
+        font-family: $Inter-Medium;
+        color: $accShade-500;
+        font-size: 16px;
+        max-width: 340px;
+        padding: 8px 19px;
+        border-bottom: solid 2px $accShade-400;
+
+
+        &:hover {
+            border-bottom: solid 2px $accShade-500;
+            color: $accShade-600;
+        }
+
+        &:active {
+            border-bottom: solid 2px $focusBlue-25;
+            color: $accShade-700;
+        }
+
+        &:focus-visible {
+            border-bottom: solid 2px $focusBlue-25;
+            color: $accShade-700;
+        }
+
+        &::placeholder {
+            font-family: $Inter-Regular;
+            font-weight: 400;
+            color: $accShade-400;
+            font-size: 14px;
+        }
+    }
+    .helperText {
+        display: block;
+        font-family: $Inter-Medium;
+        font-weight: 500;
+        font-size: 14px;
+        color: $accShade-500;
+
+        padding-bottom: 12px;
+    }
+}
+
+.standard:has(input:focus) label {
+    color: $focusBlue-25;
 }

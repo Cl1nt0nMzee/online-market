@@ -34,6 +34,8 @@ const RegisterForm = () => {
             Aliquid veniam ab fugit. Sapiente dolorum at corporis eaque, unde sunt vero quaerat ab consectetur eveniet quas. Maxime possimus tenetur, vitae cumque ducimus vel aspernatur beatae temporibus, rem doloribus magni.</p>
 
             <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
+            <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
+            <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'} helperText={'Lorem Ipsum'}/>
             <FilledTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
         </form>
     );
