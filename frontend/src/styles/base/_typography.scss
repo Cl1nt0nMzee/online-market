@@ -14,7 +14,7 @@ $Inter-Regular: 'Inter-Regular', sans-serif;
 
 .test {
     font-family: $Givonic-Black;
-    font-size: 3.2em;
+    font-size: 3.2rem;
     line-height: 1.1;
     
     background-color: red;
@@ -22,7 +22,7 @@ $Inter-Regular: 'Inter-Regular', sans-serif;
 
 .typ__headline {
     font-family: $Givonic-Bold;
-    font-size: 3.2em;
+    font-size: 3.2rem;
     line-height: 1.1;
     color: $priBlue-600;
 
@@ -33,16 +33,106 @@ $Inter-Regular: 'Inter-Regular', sans-serif;
     
 }
 
+/*      
+        Body Typography      
+                            */
+
+// Body Medium/Regular
 .typ__body {
     font-family: $Inter-Medium;
-    font-size: 1.6em;
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 1.5;
     color: $priBlue-600;
 }
-
-.typ__captions {
-    font-family: $Inter-Regular;
-    color: $accShade-600;
-    font-size: 12px;
+.typ__body.semiBold {
+    font-family: $Inter-SemiBold;
+    font-weight: 600;
+    color: $priBlue-700;
+}
+.typ__body.Bold {
+    font-family: $Inter-Bold;
+    font-weight: 700;
+    color: $priBlue-700;
 }
 
+// Body Large
+.typ__body.large {
+    font-size: 1.125rem;
+}
+.typ__body.large.semiBold {
+    font-family: $Inter-SemiBold;
+    font-weight: 600;
+    color: $priBlue-700;
+}
+.typ__body.large.Bold {
+    font-family: $Inter-Bold;
+    font-weight: 700;
+    color: $priBlue-700;
+}
+
+// Body Small
+.typ__body.small {
+    font-size: 0.875rem;
+}
+.typ__body.small.semiBold {
+    font-family: $Inter-SemiBold;
+    color: $priBlue-700;
+}
+.typ__body.small.Bold {
+    font-family: $Inter-Bold;
+    color: $priBlue-700;
+}
+
+
+/*      
+        Captions Typography      
+                            */
+
+// Captions Medium/Regular
+.typ__captions {
+    font-family: $Inter-Regular;
+    color: $accShade-500;
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+.typ__captions.medium {
+    font-family: $Inter-Medium;
+    font-weight: 500;
+    color: $accShade-600;
+}
+.typ__captions.semiBold {
+    font-family: $Inter-SemiBold;
+    font-weight: 600;
+    color: $accShade-600;
+}
+
+// Captions Large
+.typ__captions.large {
+    font-size: 0.875rem;
+}
+.typ__captions.large.medium {
+    font-family: $Inter-Medium;
+    font-weight: 500;
+    color: $accShade-600;
+}
+.typ__captions.large.semiBold {
+    font-family: $Inter-SemiBold;
+    font-weight: 600;
+    color: $accShade-600;
+}
+
+// Captions Small
+.typ__captions.small {
+    font-size: 0.625rem;
+}
+.typ__captions.small.medium {
+    font-family: $Inter-Medium;
+    font-weight: 500;
+    color: $accShade-600;
+}
+.typ__captions.small.semiBold {
+    font-family: $Inter-SemiBold;
+    font-weight: 600;
+    color: $accShade-600;
+}

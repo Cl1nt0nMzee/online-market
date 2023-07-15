@@ -1,22 +1,22 @@
-import './TextInput.css';
+import './_index.scss';
 
-const FilledTextInput = ({ placeholder, label }) => {
+export const FilledTextInput = ({ placeholder, label, id }) => {
     return (
         <div className="filled">
-            <label for="exampleFormControlInput1"> { label }</label>
-            <input type="text" placeholder={ placeholder } />
+            <label htmlFor={id}> { label }</label>
+            <input type="text" placeholder={ placeholder } id={id}/>
         </div>
     );
 }
 
-const StandardTextInput = ({ placeholder, label }) => {
+export const StandardTextInput = ({ placeholder, label , id}) => {
     return (
         <div className="standard">
-            <label for="exampleFormControlInput1"> { label }</label>
-            <input type="text" placeholder={ placeholder } />
+            <label htmlFor={id}> { label }</label>
+            <input type="text" placeholder={ placeholder } id={id} />
         </div>
     );
 }
 
 
-export { FilledTextInput, StandardTextInput }
+//export { FilledTextInput, StandardTextInput }
