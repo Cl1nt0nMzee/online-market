@@ -20,17 +20,28 @@ button {
                     
     cursor:pointer;
     transition: all 100ms ease-out;
+
+    /* Hover State */ 
+    &:hover {
+        background-color: $priBlue-700;
+        box-shadow: $box-shadow;
+    }
+    /* Active State */ 
+    &:active {
+        background-color: $priBlue-700;
+        transform: translateY(4px);
+    }
+    /* Focus State */ 
+    &:focus-visible {
+        background-color: $priBlue-700;
+        box-shadow: $box-shadow;
+        outline: solid 2px $focusBlue-75 ;
+        outline-offset: 3px;
+    }
 }
-/* Hover State */ 
-.primary:hover {
-    background-color: $priBlue-700;
-    box-shadow: $box-shadow;
-}
-/* Active State */ 
-.primary:active {
-    background-color: $priBlue-700;
-    transform: translateY(4px);
-}
+
+
+
 /* Focus State */ 
 .primary:focus-visible {
     background-color: $priBlue-700;
@@ -62,3 +73,133 @@ Disabled State  (incl. hover,active, while disabled)*/
     padding: 9px 18px;
     margin: 8px;
 }
+
+
+.secondary {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $priBlue-600;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px 14px;
+    margin: 10px;
+    width: fit-content;
+    max-height: 33px;
+
+    border: solid 2px $priBlue-600;
+    border-radius: 20px;
+    background-color: transparent;
+    
+    cursor:pointer;
+    transition: all 100ms ease-out;
+
+    /* Hover State */ 
+    &:hover {
+        color: $priBlue-800;
+        border: solid 2px $priBlue-800;
+        box-shadow: $buttonDropShadow;
+    }
+    /* Active State */ 
+    &:active {
+        color: var(--primGreen-800);
+        border: solid 2px $priBlue-800;
+        transform: translateY(4px);
+    }
+    /* Focus State */ 
+    &:focus-visible {
+        color: $priBlue-800;
+        border: solid 2px $priBlue-800;
+        box-shadow: $buttonDropShadow;
+        outline: solid 2px $focusBlue-75 ;
+        outline-offset: 3px;
+    }
+
+    &.small {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 8px;
+        max-height: 26px;
+    }
+    
+    &.large {
+        font-size: 18px;
+        padding: 9px 18px;
+        margin: 8px;
+        max-height: 39px;
+    }
+}
+/* 
+Disabled State  (incl. hover,active, while disabled)*/ 
+
+.secondary:is(:disabled), button.sec.disabled {
+    border: solid 2px $accShade-300;
+    color: $accShade-300;
+    cursor: not-allowed;
+}
+.secondary:is(:disabled):hover {
+    border: solid 2px $accShade-300;
+    box-shadow: none;
+}
+.secondary:is(:disabled):active {
+    border: solid 2px $accShade-300;
+    transform: translateY(0);
+}
+
+/* Tertiary Button */
+.tertiary {
+    color: $priBlue-600;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px 14px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    
+    cursor:pointer;
+    transition: all 100ms ease-out;
+
+    &:hover {
+        color: $priBlue-800;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    &:active {
+        color: $priBlue-800;
+        transform: translateY(4px);
+    }
+
+    &:focus-visible {
+        color: var(--primGreen-800);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+        outline: solid 2px $focusBlue-75 ;
+        outline-offset: 3px;
+    }
+}
+
+.tertiary:is(:disabled), .tertiary.disabled {
+    color: $accShade-300;
+    cursor: not-allowed;
+}
+.tertiary:is(:disabled):hover {
+    color: $accShade-300;
+    box-shadow: none;
+}
+.tertiary:is(:disabled):active {
+    transform: translateY(0);
+}
+
+.tertiary.small {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin: 8px;
+}
+
+.tertiary.large {
+    font-size: 18px;
+    padding: 9px 18px;
+    margin: 8px;
+}
+

@@ -1,0 +1,21 @@
+@import '../../../styles/abstracts/index';
+@import '../../../styles/base/index';
+
+.pageWrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formWrapper {
+
+    width: 40%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    padding: 32px;
+    border-radius: 8px;
+}
