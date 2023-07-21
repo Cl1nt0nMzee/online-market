@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { PrimaryButton, SecondaryButton, TertiaryButton } from "../atoms/button/Button";
+import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from "../atoms/button/Button";
 
 import { FilledTextInput, StandardTextInput } from '../atoms/Input/TextInput';
 //import Textarea from '../atoms/Input/Textarea';
@@ -40,7 +40,9 @@ const RegisterForm = () => {
 
             < PrimaryButton size={'small'} text={"Log In Now"}/>
             <SecondaryButton  text={"Log In Now"}/>
-            < TertiaryButton />
+            < TertiaryButton size={'large'} text={"I'm Batman"}/>
+
+            < DangerButton size={'large'} text={"I'm Danger"} />
         </form>
     );
 };

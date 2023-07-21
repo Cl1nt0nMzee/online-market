@@ -38,41 +38,40 @@ button {
         outline: solid 2px $focusBlue-75 ;
         outline-offset: 3px;
     }
+
+    &.small{
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 8px;
+    }
+
+    &.large {
+        font-size: 18px;
+        padding: 9px 18px;
+        margin: 8px;
+    }
+    /* 
+        Disabled State  (incl. hover,active, while disabled)
+                                                                */ 
+
+    &:is(:disabled) {
+        background-color: $accShade-300;
+        cursor: not-allowed;
+    }
+
+    &:is(:disabled):hover {
+        background-color: $accShade-300;
+        box-shadow: none;
+    }
+    &:is(:disabled):active {
+        background-color: $accShade-300;
+        transform: translateY(0);    
+    }
 }
 
 
 
-/* Focus State */ 
-.primary:focus-visible {
-    background-color: $priBlue-700;
-    box-shadow: $box-shadow;
-    outline: solid 2px $focusBlue-75 ;
-    outline-offset: 3px;
-}
-/* 
-Disabled State  (incl. hover,active, while disabled)*/ 
-.primary:is(:disabled) {
-    background-color: $accShade-300;
-    cursor: not-allowed;
-}
-.primary:is(:disabled):hover {
-    background-color: $accShade-300;
-    box-shadow: none;
-}
-.primary:is(:disabled):active {
-    background-color: $accShade-300;
-    transform: translateY(0);
-}
-.primary.small {
-    font-size: 12px;
-    padding: 6px 12px;
-    margin: 8px;
-}
-.primary.large {
-    font-size: 18px;
-    padding: 9px 18px;
-    margin: 8px;
-}
+
 
 
 .secondary {
@@ -177,6 +176,18 @@ Disabled State  (incl. hover,active, while disabled)*/
         outline: solid 2px $focusBlue-75 ;
         outline-offset: 3px;
     }
+
+    &.small {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 8px;
+    }
+
+    &.large {
+        font-size: 18px;
+        padding: 9px 18px;
+        margin: 8px;
+    }
 }
 
 .tertiary:is(:disabled), .tertiary.disabled {
@@ -191,15 +202,64 @@ Disabled State  (incl. hover,active, while disabled)*/
     transform: translateY(0);
 }
 
-.tertiary.small {
-    font-size: 12px;
-    padding: 6px 12px;
-    margin: 8px;
-}
 
-.tertiary.large {
-    font-size: 18px;
-    padding: 9px 18px;
-    margin: 8px;
-}
+.danger {
+    color: $neuWhite-75;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px 14px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: $errorRed-50;
+                    
+    cursor:pointer;
+    transition: all 100ms ease-out;
 
+    /* Hover State */ 
+    &:hover {
+        background-color: $errorRed-75;
+        box-shadow: $box-shadow;
+    }
+    /* Active State */ 
+    &:active {
+        background-color: $errorRed-75;
+        transform: translateY(4px);
+    }
+    /* Focus State */ 
+    &:focus-visible {
+        background-color: $errorRed-75;
+        box-shadow: $box-shadow;
+        outline: solid 2px $errorRed-25 ;
+        outline-offset: 3px;
+    }
+
+    &.small{
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 8px;
+    }
+
+    &.large {
+        font-size: 18px;
+        padding: 9px 18px;
+        margin: 8px;
+    }
+    /* 
+        Disabled State  (incl. hover,active, while disabled)
+                                                                */ 
+
+    &:is(:disabled) {
+        background-color: $accShade-400;
+        cursor: not-allowed;
+    }
+
+    &:is(:disabled):hover {
+        background-color: $accShade-400;
+        box-shadow: none;
+    }
+    &:is(:disabled):active {
+        background-color: $accShade-400;
+        transform: translateY(0);    
+    }
+}
