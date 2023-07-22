@@ -1,6 +1,6 @@
 import './_index.scss';
 
-const HelperText = ({helperText}) => {
+export const HelperText = ({helperText}) => {
 
     return (
         <p className='helperText'> {helperText} </p>

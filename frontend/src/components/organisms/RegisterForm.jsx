@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from "../atoms/button/Button";
+import { PasswordInput } from "../atoms/Input/PasswordInput";
 
 import { FilledTextInput, StandardTextInput } from '../atoms/Input/TextInput';
 //import Textarea from '../atoms/Input/Textarea';
@@ -43,6 +44,7 @@ const RegisterForm = () => {
             < TertiaryButton size={'large'} text={"I'm Batman"}/>
 
             < DangerButton size={'large'} text={"I'm Danger"} />
+            < PasswordInput placeholder={'Enter your password'} id={'password'} label={'Password'} helperText={'Lorem Ipsum'}/>
         </form>
     );
 };
