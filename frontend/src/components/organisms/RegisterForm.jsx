@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from "../atoms/button/Button";
 import { PasswordInput } from "../atoms/Input/PasswordInput";
+import { TextArea } from "../atoms/Input/TextArea";
 
 import { FilledTextInput, StandardTextInput } from '../atoms/Input/TextInput';
 //import Textarea from '../atoms/Input/Textarea';
@@ -35,16 +36,11 @@ const RegisterForm = () => {
             Similique et praesentium architecto aliquid nostrum quos nihil hic distinctio voluptatem necessitatibus eius sit fugiat consequuntur earum accusantium tempore labore repellendus expedita excepturi magnam fugit, commodi doloribus. Cumque, rerum consequatur!</p> 
 
             <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
-            <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
-            <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'} helperText={'Lorem Ipsum'}/>
-            <FilledTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
-
-            < PrimaryButton size={'small'} text={"Log In Now"}/>
-            <SecondaryButton  text={"Log In Now"}/>
-            < TertiaryButton size={'large'} text={"I'm Batman"}/>
-
-            < DangerButton size={'large'} text={"I'm Danger"} />
             < PasswordInput placeholder={'Enter your password'} id={'password'} label={'Password'} helperText={'Lorem Ipsum'}/>
+            < TextArea placeholder={'Enter some text here'} label={'Text Area'}/>
+
+            < PrimaryButton  text={"Log In Now"} />
+            <SecondaryButton  text={"Log In Now"}/>
         </form>
     );
 };
