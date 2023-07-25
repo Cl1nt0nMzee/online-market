@@ -37,7 +37,7 @@ const RegisterForm = () => {
 
             <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
             < PasswordInput placeholder={'Enter your password'} id={'password'} label={'Password'} helperText={'Lorem Ipsum'}/>
-            < TextArea placeholder={'Enter some text here'} label={'Text Area'}/>
+            < TextArea placeholder={'Enter some text here'} label={'Text Area'} maxChars={600} helperText={'Lorem Ipsum'}/>
 
             < PrimaryButton  text={"Log In Now"} />
             <SecondaryButton  text={"Log In Now"}/>

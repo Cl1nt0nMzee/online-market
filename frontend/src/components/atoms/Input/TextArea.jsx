@@ -1,20 +1,25 @@
 import './_index.scss';
 
+import { HelperText } from './TextInput';
+
 const CharacterCounter = ({current, max} ) => {
 
     return (
-        <p className='characterCounter'> {current} / {max}</p>
+        <div className="counterWrapper">
+            <p className='characterCounter'> {current} / {max}</p>
+        </div>
     )
 }
 
-export const TextArea = ({id, label, placeholder, helperText}) => {
+export const TextArea = ({id, label, placeholder, helperText, maxChars}) => {
 
     return (
         <div className="textArea">
             <label htmlFor={id}> {label} </label>
             <textarea id={id} cols={undefined} rows={undefined} placeholder={placeholder}>
             </textarea>
-            <CharacterCounter current={'32'} max={'500'}/>
+            {maxChars? <CharacterCounter current={'32'} max={maxChars}/> : null}
+            {helperText? <HelperText helperText={helperText}/> : null}
         </div>
     )
 }
