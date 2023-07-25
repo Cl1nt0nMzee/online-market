@@ -249,9 +249,15 @@ textarea {
 .textArea {
     width: 100%;
     max-width: 340px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
 
     label {
-
+        display: block;
+        padding-left: 8px;
+        font-family: $Inter-SemiBold;
+        color: $priBlue-600;
     }
 
     textarea {
@@ -288,7 +294,7 @@ textarea {
     }
 
     &:has(textarea:focus-visible) textarea {
-        background-color: #E6E6E650;
+        background-color: #E6E6E670;
     }
 
     .characterCounter {
@@ -302,4 +308,8 @@ textarea {
         padding-left: auto;
         padding-bottom: 12px;
     }
+    &:has(textarea:focus-visible) label {
+        color: $focusBlue-25 ;
+    }
+
 }
