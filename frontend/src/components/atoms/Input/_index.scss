@@ -6,6 +6,10 @@ input[type="password"] {
     border: none;
     outline: none;
 }
+textarea {
+    border: none;
+    outline: none; 
+}
 
 .standard {
     display: flex;
@@ -56,10 +60,10 @@ input[type="password"] {
     }
     .helperText {
         display: block;
-        font-family: $Inter-Medium;
-        font-weight: 500;
+        font-family: $Inter-Regular;
+        font-weight: 400;
         font-size: 14px;
-        color: $accShade-500;
+        color: $accShade-300;
 
         padding-bottom: 12px;
     }
@@ -78,7 +82,7 @@ input[type="password"] {
     margin: 6px 6px;
     transition: all 100ms ease;
 
-    padding: 5px 5px;
+    padding-top: 5px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     background-color: $accShade-100;
@@ -89,6 +93,7 @@ input[type="password"] {
 
     label {
         display: block;
+        padding-left: 8px;
         font-family: $Inter-SemiBold;
         color: $priBlue-600;
     }
@@ -137,4 +142,189 @@ input[type="password"] {
     &:has(input[type="text"]:focus) label {
         color: $focusBlue-25;
     }
+}
+
+
+
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 6px 6px;
+    transition: all 100ms ease;
+    * {
+        transition: all 100ms ease;
+    }
+
+    label {
+        display: block;
+        font-family: $Inter-SemiBold;
+        color: $priBlue-600;
+    }
+
+    input {
+        font-family: $Inter-Medium;
+        color: $accShade-500;
+        font-size: 16px;
+        max-width: 340px;
+        padding: 8px 19px;
+        border-bottom: solid 2px $accShade-400;
+
+
+        &:hover {
+            border-bottom: solid 2px $accShade-500;
+            color: $accShade-600;
+        }
+
+        &:active {
+            border-bottom: solid 2px $focusBlue-25;
+            color: $accShade-700;
+        }
+
+        &:focus-visible {
+            border-bottom: solid 2px $focusBlue-25;
+            color: $accShade-700;
+        }
+
+        &::placeholder {
+            font-family: $Inter-Regular;
+            font-weight: 400;
+            color: $accShade-400;
+            font-size: 14px;
+        }
+
+
+    }
+    .helperText {
+        display: block;
+        font-family: $Inter-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        color: $accShade-300;
+
+        margin-top: -24px;
+        padding-bottom: 12px;
+    }
+    &:has(input[type="password"]:focus) label,
+    &:has(input[type="text"]:focus) label {
+        color: $focusBlue-25;
+    }
+
+    &:has(input[type="password"]:focus) button,
+    &:has(input[type="text"]:focus) button {
+        background-color: $accShade-100 ;
+    }
+
+    button {
+        position: relative;
+        top: -35px;
+        left: 300px;
+        display: inline-flex;
+
+        line-height: 1;
+        font-size: 16px;
+        color: $accShade-600;
+
+        justify-content: center;
+        align-items: center;
+
+        background-color: #E6E6E650;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    button:hover{
+        color: $accShade-800;
+        background-color: $accShade-300;
+    } button:active {
+        color: $accShade-800;
+        background-color: $accShade-300;
+    }
+}
+
+.textArea {
+    width: 100%;
+    max-width: 340px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+
+    label {
+        display: block;
+        padding-left: 8px;
+        font-family: $Inter-SemiBold;
+        color: $priBlue-600;
+    }
+
+    textarea {
+        font-family: $Inter-Medium;
+        color: $accShade-500;
+        font-size: 16px;
+        width: 100%;
+        padding: 19px 19px;
+        border-bottom: solid 2px $accShade-400;
+        background-color: transparent;
+
+
+        &:hover {
+            border-bottom: solid 2px $accShade-500;
+            color: $accShade-600;
+        }
+
+        &:active {
+            border-bottom: solid 2px $focusBlue-25;
+            color: $accShade-700;
+        }
+
+        &:focus-visible {
+            border-bottom: solid 2px $focusBlue-25;
+            color: $accShade-700;
+        }
+
+        &::placeholder {
+            font-family: $Inter-Regular;
+            font-weight: 400;
+            color: $accShade-400;
+            font-size: 14px;
+        }
+    }
+
+    &:has(textarea:focus-visible) textarea {
+        background-color: #E6E6E670;
+    }
+    .counterWrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+
+
+        .characterCounter {
+            display: inline;
+            font-family: $Inter-Regular;
+            font-weight: 400;
+            font-size: 12px;
+            color: $accShade-400;
+    
+            padding-left: auto;
+            padding-bottom: 12px;
+        }
+    }
+    .helperText {
+        display: block;
+        font-family: $Inter-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        color: $accShade-300;
+        padding-bottom: 12px;
+    }
+
+    &:has(textarea:focus-visible) label {
+        color: $focusBlue-25 ;
+    }
+
 }
