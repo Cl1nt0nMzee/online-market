@@ -1,9 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from "../atoms/button/Button";
+import { CheckBox, CheckBox_1 } from "../atoms/Checkbox/CheckBox";
 import { PasswordInput } from "../atoms/Input/PasswordInput";
 import { TextArea } from "../atoms/Input/TextArea";
 
 import { FilledTextInput, StandardTextInput } from '../atoms/Input/TextInput';
+import {ToggleSwitch} from "../atoms/ToggleSwitch/ToggleSwitch";
 //import Textarea from '../atoms/Input/Textarea';
 
 
@@ -41,6 +43,9 @@ const RegisterForm = () => {
 
             < PrimaryButton  text={"Log In Now"} />
             <SecondaryButton  text={"Log In Now"}/>
+            <ToggleSwitch />
+            < CheckBox />
+            < CheckBox_1 labal={'Lorem Ipsum'} />
         </form>
     );
 };

@@ -70,6 +70,11 @@ textarea {
     &:has(input[type="text"]:focus) label {
         color: $focusBlue-25;
     }
+
+    // Firefox Fix
+    &:focus-within  label {
+        color: $focusBlue-25;
+    }
 }
 
 
@@ -140,6 +145,11 @@ textarea {
         padding-bottom: 12px;
     }
     &:has(input[type="text"]:focus) label {
+        color: $focusBlue-25;
+    }
+
+    // Firefox Fix
+    &:focus-within  label {
         color: $focusBlue-25;
     }
 }
@@ -244,6 +254,11 @@ textarea {
         color: $accShade-800;
         background-color: $accShade-300;
     }
+
+    // Firefox Fix
+    &:focus-within  label {
+        color: $focusBlue-25;
+    }
 }
 
 .textArea {
@@ -304,14 +319,16 @@ textarea {
 
 
         .characterCounter {
+            margin-top: 6px;
             display: inline;
             font-family: $Inter-Regular;
             font-weight: 400;
+            line-height: 1;
             font-size: 12px;
             color: $accShade-400;
     
             padding-left: auto;
-            padding-bottom: 12px;
+            padding-bottom: 6px;
         }
     }
     .helperText {
@@ -325,6 +342,11 @@ textarea {
 
     &:has(textarea:focus-visible) label {
         color: $focusBlue-25 ;
+    }
+
+    // Firefox Fix
+    &:focus-within  label {
+        color: $focusBlue-25;
     }
 
 }
