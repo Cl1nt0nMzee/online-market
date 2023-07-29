@@ -1,9 +1,19 @@
 import './_index.scss';
 
-export const HelperText = ({helperText}) => {
+export const HelperText = ({helperText, status}) => {
+    
+    let style = undefined;
+
+    if (status === 'error') {
+        style = 'helperText error';
+    } else if (status === 'warning') {
+        style = 'helperText warning';
+    } else {
+        style = 'helperText';
+    }
 
     return (
-        <p className='helperText'> {helperText} </p>
+        <p className={style}> {helperText} </p>
     );
 }
 

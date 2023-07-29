@@ -15,7 +15,7 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    margin: 6px 6px;
+    margin: 14px 6px;
     transition: all 100ms ease;
     * {
         transition: all 100ms ease;
@@ -58,15 +58,7 @@ textarea {
             font-size: 14px;
         }
     }
-    .helperText {
-        display: block;
-        font-family: $Inter-Regular;
-        font-weight: 400;
-        font-size: 14px;
-        color: $accShade-300;
 
-        padding-bottom: 12px;
-    }
     &:has(input[type="text"]:focus) label {
         color: $focusBlue-25;
     }
@@ -84,7 +76,7 @@ textarea {
     display: inline-flex;
     flex-direction: column;
     gap: 3px;
-    margin: 6px 6px;
+    margin: 14px 6px;
     transition: all 100ms ease;
 
     padding-top: 5px;
@@ -135,15 +127,7 @@ textarea {
             font-size: 14px;
         }
     }
-    .helperText {
-        display: block;
-        font-family: $Inter-Medium;
-        font-weight: 500;
-        font-size: 14px;
-        color: $accShade-500;
 
-        padding-bottom: 12px;
-    }
     &:has(input[type="text"]:focus) label {
         color: $focusBlue-25;
     }
@@ -160,7 +144,8 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    margin: 6px 6px;
+    margin: 14px 6px;
+    padding-bottom: 12px;
     transition: all 100ms ease;
     * {
         transition: all 100ms ease;
@@ -206,14 +191,7 @@ textarea {
 
     }
     .helperText {
-        display: block;
-        font-family: $Inter-Regular;
-        font-weight: 400;
-        font-size: 14px;
-        color: $accShade-300;
-
         margin-top: -24px;
-        padding-bottom: 12px;
     }
     &:has(input[type="password"]:focus) label,
     &:has(input[type="text"]:focus) label {
@@ -267,6 +245,7 @@ textarea {
     display: inline-flex;
     flex-direction: column;
     gap: 3px;
+    margin: 14px 0px;
 
     label {
         display: block;
@@ -332,13 +311,9 @@ textarea {
         }
     }
     .helperText {
-        display: block;
-        font-family: $Inter-Regular;
-        font-weight: 400;
-        font-size: 14px;
-        color: $accShade-300;
-        padding-bottom: 12px;
+        margin-top: -8px;
     }
+
 
     &:has(textarea:focus-visible) label {
         color: $focusBlue-25 ;
@@ -349,4 +324,20 @@ textarea {
         color: $focusBlue-25;
     }
 
+}
+
+
+.helperText {
+    display: block;
+    font-family: $Inter-Regular;
+    font-weight: 400;
+    font-size: 14px;
+    color: $accShade-300;
+    margin-top: 6px;
+}
+.helperText.warning {
+    color: $priOrange-400;
+}
+.helperText.error {
+    color: $errorRed-75;
 }

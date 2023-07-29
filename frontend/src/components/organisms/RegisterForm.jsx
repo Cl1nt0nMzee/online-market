@@ -3,6 +3,7 @@ import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from "..
 import { CheckBox, CheckBox_1 } from "../atoms/Checkbox/CheckBox";
 import { PasswordInput } from "../atoms/Input/PasswordInput";
 import { TextArea } from "../atoms/Input/TextArea";
+import { HelperText } from "../atoms/Input/TextInput";
 
 import { FilledTextInput, StandardTextInput } from '../atoms/Input/TextInput';
 import {ToggleSwitch} from "../atoms/ToggleSwitch/ToggleSwitch";
@@ -39,13 +40,14 @@ const RegisterForm = () => {
 
             <StandardTextInput id={'name'} placeholder={'Enter your name'} label={'Name'}/>
             < PasswordInput placeholder={'Enter your password'} id={'password'} label={'Password'} helperText={'Lorem Ipsum'}/>
-            < TextArea placeholder={'Enter some text here'} label={'Text Area'} maxChars={600} helperText={'Lorem Ipsum'}/>
+            < TextArea placeholder={'Enter some text here'} label={'Text Area'} maxChars={30} helperText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'} status={'warning'}/>
 
             < PrimaryButton  text={"Log In Now"} />
             <SecondaryButton  text={"Log In Now"}/>
             <ToggleSwitch />
             < CheckBox />
             < CheckBox_1 labal={'Lorem Ipsum'} />
+            <HelperText helperText={'Lorem Ipsum'} status={'error'}/>
         </form>
     );
 };
