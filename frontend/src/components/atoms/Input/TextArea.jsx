@@ -4,9 +4,30 @@ import { HelperText } from './TextInput';
 
 const CharacterCounter = ({current, max} ) => {
 
+    let style= ''; let warningmessage = '';
+    let _curr = parseInt(current);
+    let _max = parseInt(max);
+    let constant = _curr / _max;
+
+    if (constant > 0.8) {
+        style = 'characterCounter warning';
+        warningmessage = '';
+
+        if (constant > 0.9) {
+            style = 'characterCounter error';
+            warningmessage = '';
+            if (constant == 1) {
+                warningmessage = 'Character limit exceeded!    ';
+            }
+            
+        }
+    } else {
+        style = 'characterCounter';
+        warningmessage = '';
+    }
     return (
         <div className="counterWrapper">
-            <p className='characterCounter'> {current} / {max}</p>
+            <p className={style}> {warningmessage} {current} / {max}</p>
         </div>
     )
 }

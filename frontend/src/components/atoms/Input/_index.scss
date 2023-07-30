@@ -308,6 +308,17 @@ textarea {
     
             padding-left: auto;
             padding-bottom: 6px;
+
+            &.warning {
+                color: $priOrange-400;
+                font-family: $Inter-Medium;
+                font-weight: 500;
+            }
+            &.error {
+                color: $errorRed-75;
+                font-family: $Inter-Medium;
+                font-weight: 500;
+            }
         }
     }
     .helperText {
