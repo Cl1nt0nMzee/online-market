@@ -1,53 +1,98 @@
-import './_index.scss';
-import React, { useEffect, useState } from 'react';
-import { HelperText } from './TextInput';
+import "./_index.scss";
+import React, { useReducer, useRef, useState } from "react";
+import { HelperText } from "./TextInput";
+import useAutosizeTextArea from "./useAutosizeTextArea";
 
-const CharacterCounter = ({current, max} ) => {
+const CharacterCounter = ({ current, max }) => {
+  let style = "";
+  let warningmessage = "";
+  let _curr = parseInt(current);
+  let _max = parseInt(max);
+  let constant = _curr / _max;
 
-    let style= ''; let warningmessage = '';
-    let _curr = parseInt(current);
-    let _max = parseInt(max);
-    let constant = _curr / _max;
+  // switch (true) {
+  //     case constant > 0.8 :
+  //         style = 'characterCounter warning';
+  //         warningmessage = '';
 
-    if (constant > 0.8) {
-        style = 'characterCounter warning';
-        warningmessage = '';
+  //     case constant > 0.9 :
+  //         style = 'characterCounter error';
+  //         warningmessage = '';
 
-        if (constant > 0.9) {
-            style = 'characterCounter error';
-            warningmessage = '';
-            if (constant == 1) {
-                warningmessage = 'Character limit exceeded!    ';
-            }
-            
-        }
-    } else {
-        style = 'characterCounter';
-        warningmessage = '';
+  //     case constant == 1 :
+  //         style = 'characterCounter error';
+  //         warningmessage = 'Character limit exceeded!    '
+
+  //     default:
+  //         style = 'characterCounter';
+  //     warningmessage = '';
+  // }
+  if (constant > 0.8) {
+    style = "characterCounter warning";
+    warningmessage = "";
+
+    if (constant > 0.9) {
+      style = "characterCounter error";
+      warningmessage = "";
+      if (constant == 1) {
+        warningmessage = "Character limit exceeded!    ";
+      }
     }
-    return (
-        <div className="counterWrapper">
-            <p className={style}> {warningmessage} {current} / {max}</p>
-        </div>
-    )
-}
+  } else {
+    style = "characterCounter";
+    warningmessage = "";
+  }
+  return (
+    <div className="counterWrapper">
+      <p className={style}>
+        {" "}
+        {warningmessage} {current} / {max}
+      </p>
+    </div>
+  );
+};
 
-export const TextArea = ({id, label, placeholder, helperText, maxChars, status}) => {
+export const TextArea = ({
+  id,
+  label,
+  placeholder,
+  helperText,
+  maxChars,
+  status,
+}) => {
+  const [count, setCount] = useState(0);
+  const [value, setValue] = useState("");
+  const textAreaElement = useRef();
 
-    const [count, setCount] = useState(0);
+  useAutosizeTextArea(textAreaElement.current, value);
 
-    const onChange = (e) => {
-        let currentCount = e.target.value.length;
-        setCount(currentCount);
-    }
+  const onChange = (e) => {
+    let currentCount = e.target.value.length;
+    let val = e.target?.value;
+    setCount(currentCount);
+    setValue(val);
+  };
 
-    return (
-        <div className="textArea">
-            <label htmlFor={id}> {label} </label>
-            <textarea id={id} cols={undefined} rows={undefined} placeholder={placeholder} onChange={onChange} maxLength={maxChars}>
-            </textarea>
-            {maxChars? <CharacterCounter current={count} max={maxChars}/> : null}
-            {helperText? <HelperText helperText={helperText} status={status}/> : null}
-        </div>
-    )
-}
+  return (
+    <div className="textArea">
+      <label htmlFor={id}> {label} </label>
+      <div className="grow-wrap">
+        <textarea
+          id={id}
+          cols={undefined}
+          rows={undefined}
+          placeholder={placeholder}
+          onChange={onChange}
+          maxLength={maxChars}
+          ref={textAreaElement}
+          value={value}
+        ></textarea>{" "}
+      </div>
+      {maxChars ? <CharacterCounter current={count} max={maxChars} /> : null}
+      {helperText ? (
+        <HelperText helperText={helperText} status={status} />
+      ) : null}
+    </div>
+  );
+};
+
