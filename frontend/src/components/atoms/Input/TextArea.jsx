@@ -76,18 +76,16 @@ export const TextArea = ({
   return (
     <div className="textArea">
       <label htmlFor={id}> {label} </label>
-      <div className="grow-wrap">
-        <textarea
-          id={id}
-          cols={undefined}
-          rows={undefined}
-          placeholder={placeholder}
-          onChange={onChange}
-          maxLength={maxChars}
-          ref={textAreaElement}
-          value={value}
-        ></textarea>{" "}
-      </div>
+      <textarea
+        id={id}
+        cols={undefined}
+        rows={undefined}
+        placeholder={placeholder}
+        onChange={onChange}
+        maxLength={maxChars}
+        ref={textAreaElement}
+        value={value}
+      ></textarea>{" "}
       {maxChars ? <CharacterCounter current={count} max={maxChars} /> : null}
       {helperText ? (
         <HelperText helperText={helperText} status={status} />
@@ -95,4 +93,3 @@ export const TextArea = ({
     </div>
   );
 };
-

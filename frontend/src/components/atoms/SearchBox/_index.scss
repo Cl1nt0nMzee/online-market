@@ -1,0 +1,39 @@
+@import "../../../styles/abstracts/index";
+@import "../../../styles/base/index";
+
+input[type="search"] {
+  border: none;
+  outline: none;
+}
+
+.searchBox {
+  position: relative;
+  display: block;
+  flex-direction: row;
+  gap: 0;
+  width: 250px;
+
+  padding: 0;
+  background-color: #efefef80;
+  transition: all ease 100ms;
+
+  .buttonWrapper {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+}
+input[type="search"] {
+  display: block;
+  width: inherit;
+  padding: 9px 18px;
+  background-color: white;
+  box-shadow: 3px 3px 25px 0 rgba(0, 0, 0, 0.15);
+  transition: all ease 100ms;
+}
+
+input[type="search"]:hover,
+input[type="search"]:focus-visible {
+  background-color: #efefef50;
+  box-shadow: none;
+}

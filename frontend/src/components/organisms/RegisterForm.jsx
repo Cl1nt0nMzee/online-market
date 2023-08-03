@@ -11,6 +11,7 @@ import { TextArea } from "../atoms/Input/TextArea";
 import { HelperText } from "../atoms/Input/TextInput";
 
 import { FilledTextInput, StandardTextInput } from "../atoms/Input/TextInput";
+import { SearchBox } from "../atoms/SearchBox/SearchBox";
 import { ToggleSwitch } from "../atoms/ToggleSwitch/ToggleSwitch";
 //import Textarea from '../atoms/Input/Textarea';
 
@@ -65,10 +66,9 @@ const RegisterForm = () => {
 
       <PrimaryButton text={"Log In Now"} />
       <SecondaryButton text={"Log In Now"} />
-      <ToggleSwitch />
-      <CheckBox />
-      <CheckBox_1 labal={"Lorem Ipsum"} />
-      <HelperText helperText={"Lorem Ipsum"} status={"error"} />
+      <SearchBox />
+      {/* <ToggleSwitch />
+      <CheckBox /> */}
     </form>
   );
 };
