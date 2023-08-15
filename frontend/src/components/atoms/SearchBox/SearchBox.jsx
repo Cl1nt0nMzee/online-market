@@ -7,18 +7,27 @@ export const SearchBox = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
-  }
-const clearInput = (e) => {
+    let val = e.target?.value;
+    setValue(val);
+  };
+  const clearInput = (e) => {
     e.preventDefault();
-}
+    setValue("");
+    searchItem.current.value = "";
+  };
+  
   return (
     <div className="searchBox">
-      <input type="search" placeholder="Search here" ref={searchItem} onChange={handleChange} />
+      <input
+        type="search"
+        placeholder="Search here"
+        ref={searchItem}
+        onChange={handleChange}
+      />
       <div className="buttonWrapper">
-        <button onClick={clearInput}>clear</button>
+        {searchItem.current.value && (<button onClick={clearInput}>clear</button>)}
         <button>search</button>
       </div>
-      <h1>{ value}</h1>
     </div>
   );
 };
