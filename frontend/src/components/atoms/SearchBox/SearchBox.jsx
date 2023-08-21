@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./_index.scss";
 
-const searchButton = ({}) => {
+const SearchButton = ({}) => {
   return (
     <>
       <button>search</button>
@@ -16,7 +16,7 @@ const ClearButton = () => {
   );
 };
 
-const searchInput = ({ placeholder, ref, onChangeFunction, id }) => {
+const SearchInput = ({ placeholder, ref, onChangeFunction, id }) => {
   return (
     <>
       <input
@@ -58,3 +58,5 @@ export const SearchBox = () => {
     </div>
   );
 };
+
+export { SearchButton, ClearButton, SearchInput}

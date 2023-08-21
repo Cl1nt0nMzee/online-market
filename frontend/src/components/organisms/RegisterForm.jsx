@@ -11,7 +11,7 @@ import { TextArea } from "../atoms/Input/TextArea";
 import { HelperText } from "../atoms/Input/TextInput";
 
 import { FilledTextInput, StandardTextInput } from "../atoms/Input/TextInput";
-import { SearchBox } from "../atoms/SearchBox/SearchBox";
+import { SearchBox, SearchInput } from "../atoms/SearchBox/SearchBox";
 import { ToggleSwitch } from "../atoms/ToggleSwitch/ToggleSwitch";
 //import Textarea from '../atoms/Input/Textarea';
 
@@ -20,20 +20,20 @@ const PWD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,24}$/;
 
 const RegisterForm = () => {
-  const [user, setUser] = useState("");
-  const [validName, setValidName] = useState(false);
-  const [userFocus, setUserFocus] = useState(false);
+  // const [user, setUser] = useState("");
+  // const [validName, setValidName] = useState(false);
+  // const [userFocus, setUserFocus] = useState(false);
 
-  const [pwd, setPwd] = useState("");
-  const [validPwd, setValidPwd] = useState(false);
-  const [pwdFocus, setPwdFocus] = useState(false);
+  // const [pwd, setPwd] = useState("");
+  // const [validPwd, setValidPwd] = useState(false);
+  // const [pwdFocus, setPwdFocus] = useState(false);
 
-  const [matchPwd, setMatchPwd] = useState("");
-  const [validMatchPwd, setValidMatchPwd] = useState(false);
-  const [matchPwdFocus, setMatchPwdFocus] = useState(false);
+  // const [matchPwd, setMatchPwd] = useState("");
+  // const [validMatchPwd, setValidMatchPwd] = useState(false);
+  // const [matchPwdFocus, setMatchPwdFocus] = useState(false);
 
-  const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
+  // const [errMsg, setErrMsg] = useState("");
+  // const [success, setSuccess] = useState(false);
 
   return (
     <form>
@@ -67,6 +67,7 @@ const RegisterForm = () => {
       <PrimaryButton text={"Log In Now"} />
       <SecondaryButton text={"Log In Now"} />
       <SearchBox />
+      <SearchInput placeholder={"lorem Ipsum"} />
       {/* <ToggleSwitch />
       <CheckBox /> */}
     </form>
